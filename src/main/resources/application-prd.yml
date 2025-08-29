@@ -1,0 +1,14 @@
+cwm:
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/cwm
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+  jpa:
+    show-sql: false
+    open-in-view: false
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
