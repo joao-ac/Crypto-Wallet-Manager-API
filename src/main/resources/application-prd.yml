@@ -1,14 +1,10 @@
 cwm:
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/cwm
-    username: ${DB_USERNAME}
-    password: ${DB_PASSWORD}
+    url: jdbc:postgresql://${PGHOST}:${PGPORT}/${PGDATABASE}
+    username: ${PGUSER}
+    password: ${PGPASSWORD}
   jpa:
-    show-sql: false
     open-in-view: false
     hibernate:
-      ddl-auto: update
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.PostgreSQLDialect
+      ddl-auto: create
